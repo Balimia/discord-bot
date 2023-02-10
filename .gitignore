@@ -1,0 +1,12 @@
+# Editor
+.vscode
+
+# Prod
+node_modules
+dist
+src/config.json
+*.env
+
+# Dev
+coverage
+src/logs.md

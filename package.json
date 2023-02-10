@@ -1,0 +1,32 @@
+{
+	"name": "discord-bot",
+	"version": "1.0.0",
+	"description": "",
+	"main": "index.js",
+	"scripts": {
+		"test": "jest",
+		"build": "tsc -p .",
+		"start": "node dist/index.js",
+		"dev": "nodemon src/index.ts"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/Balimia/discord-bot.git"
+	},
+	"keywords": [],
+	"author": "Balimia",
+	"license": "ISC",
+	"bugs": {
+		"url": "https://github.com/Balimia/discord-bot/issues"
+	},
+	"homepage": "https://github.com/Balimia/discord-bot#readme",
+	"dependencies": {
+		"discord.js": "^14.7.1"
+	},
+	"devDependencies": {
+		"@types/node": "^18.11.19",
+		"nodemon": "^2.0.20",
+		"ts-node": "^10.9.1",
+		"typescript": "^4.9.5"
+	}
+}

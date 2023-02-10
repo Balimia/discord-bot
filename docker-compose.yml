@@ -1,0 +1,38 @@
+version: '3.9'
+
+services:
+  app:
+    container_name: app
+    build: .
+    command: npm run dev # npm start in production
+    depends_on:
+      - db
+      - redis
+    env_file:
+      - ./docker.env
+    volumes:
+      - ./:/app
+
+  db:
+    container_name: db
+    image: mysql:latest
+    restart: always
+    ports:
+      - 3306:3306
+    env_file:
+      - ./docker.env
+    volumes:
+      - data:/var/lib/mysql
+
+  redis:
+    container_name: redis
+    image: redis:alpine
+    restart: always
+    ports:
+      - 6379:6379
+    volumes:
+      - cache:/data
+
+volumes:
+  data:
+  cache:
